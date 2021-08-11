@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Pokemon } from '../models/Pokemon';
 
 @Component({
@@ -8,6 +8,8 @@ import { Pokemon } from '../models/Pokemon';
 })
 export class PokemonCardComponent implements OnInit {
 
+
+@Input('pokemon')
   public pokemon!: Pokemon;
 
   constructor() { }
