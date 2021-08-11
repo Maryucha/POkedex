@@ -1,1 +1,13 @@
-<p>pokemon-card works!</p>
+<div class="cartao" *ngIf="pokemon">
+  <div class="pokemon-card">
+  <div class="pokemon-card__image">
+    <img [src]="pokemon.image">
+  </div>
+  <div class="pokemon-card__number">Nº {{ pokemon.number }}</div>
+  <div class="pokemon-card__name">{{ pokemon.name }}</div>
+  <div class="pokemon-card__types">
+    <div class="pokemon-card__type" *ngFor="let type of pokemon.types" [class]="'pokemon-card__type--' + type.toLowerCase()">{{type}}</div>
+  </div>
+</div>
+</div>
+
