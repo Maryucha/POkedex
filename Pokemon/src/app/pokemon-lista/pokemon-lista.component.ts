@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PokemonService } from '../pokemon.service';
 
 @Component({
   selector: 'app-pokemon-lista',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonListaComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: PokemonService) { }
 
   ngOnInit(): void {
   }
